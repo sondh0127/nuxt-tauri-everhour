@@ -10,11 +10,17 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@hebilicious/vue-query-nuxt": "^0.3.0",
+    "@tanstack/vue-query": "^5.22.2",
     "nuxt": "^3.10.2",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "2.0.0-beta.2"
+    "@nuxt/devtools": "^1.0.8",
+    "@tauri-apps/api": "2.0.0-beta.1",
+    "@tauri-apps/cli": "2.0.0-beta.2",
+    "@unocss/nuxt": "^0.58.5",
+    "unocss": "^0.58.5"
   }
 }

@@ -1,5 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: [
+    "@hebilicious/vue-query-nuxt",
+    '@nuxt/devtools',
+    '@unocss/nuxt',
+  ],
+  unocss: {
+    preflight: true,
+  },
   devtools: { enabled: true },
   ssr: false,
   vite: {

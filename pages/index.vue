@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <div>hello</div>
+  <div>
+    <TheProjectInfo />
+  </div>
 </template>
