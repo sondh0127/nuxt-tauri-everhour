@@ -29,9 +29,20 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "targets": "all"
+    "targets": "all",
+    "externalBin": [
+      "binaries/example"
+    ]
   },
   "identifier": "com.changed.dev",
   "productName": "nuxt-tauri-everhour",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "allowlist": {
+    "shell": {
+      "sidecar": true,
+      "scope": [
+        { "name": "binaries/exampley", "sidecar": true },
+      ]
+    }
+  }
 }

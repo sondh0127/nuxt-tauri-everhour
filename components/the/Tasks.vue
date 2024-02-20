@@ -107,7 +107,9 @@ const currentId = computed(() => dataCurrent.value?.task?.id)
   <div class="my-10">
 
     <TheQueryWrapper v-bind="query">
-
+      <div>
+        <div>Today Time:</div>
+      </div>
       <div v-for="item in data" :key="item.id" class="grid grid-cols-[1fr_auto_auto] gap-2 items-center" :class="[
         currentId === item.id ? 'bg-green' : ''
       ]">
