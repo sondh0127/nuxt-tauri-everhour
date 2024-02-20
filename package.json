@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt-tauri-everhour",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,5 +13,8 @@
     "nuxt": "^3.10.2",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.0.0-beta.2"
   }
 }
