@@ -10,8 +10,8 @@ async function greet() {
 }
 
 const { data, ...query } = useQuery({
-  queryKey: ['projects'],
-  queryFn: () => $fetch('/projects', { query: { limit: 1 } }),
+  queryKey: [QUERY_KEYS.PROJECTS],
+  queryFn: () => $fetch<any>('/projects', { query: { limit: 1 } }),
 })
 const projectId = computed(() => data.value[0].id)
 </script>
