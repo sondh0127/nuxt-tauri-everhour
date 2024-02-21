@@ -10,6 +10,5 @@ async function run() {
 <template>
   <div>
     <TheProjectInfo />
-    <UiButton @click="run">Run</UiButton>
   </div>
 </template>

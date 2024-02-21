@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@hebilicious/vue-query-nuxt",
     '@nuxt/devtools',
     '@unocss/nuxt',
+    '@vueuse/nuxt',
   ],
   unocss: {
     preflight: true,

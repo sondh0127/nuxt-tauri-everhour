@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --tunnel",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -21,6 +21,8 @@
     "@tauri-apps/api": "2.0.0-beta.1",
     "@tauri-apps/cli": "2.0.0-beta.2",
     "@unocss/nuxt": "^0.58.5",
+    "@vueuse/core": "^10.8.0",
+    "@vueuse/nuxt": "^10.8.0",
     "typescript": "^5.3.3",
     "unocss": "^0.58.5"
   }
