@@ -21,7 +21,7 @@ async function createWebhook() {
   if (!projectId.value) return
 
   const body = {
-    "targetUrl": "https://ooo-pregnant-republic-ministries.trycloudflare.com/api/webhook",
+    "targetUrl": "https://sega-trap-means-imperial.trycloudflare.com/api/webhook",
     "events": [
       "api:timer:stopped",
       "api:timer:started"
@@ -33,6 +33,7 @@ async function createWebhook() {
     await $fetch(`/hooks/${WEBHOOK_ID.value}`, {
       method: 'DELETE',
     })
+    WEBHOOK_ID.value = undefined
   }
   const res = await $fetch('/hooks', {
     method: 'POST',
@@ -42,6 +43,24 @@ async function createWebhook() {
   WEBHOOK_ID.value = res.id
 }
 
+
+
+const {
+  isSupported,
+  notification,
+  show,
+  close,
+  onClick,
+  onShow,
+  onError,
+  onClose,
+} = useWebNotification({
+  title: 'Timer stop',
+  dir: 'auto',
+  lang: 'en',
+  renotify: true,
+  tag: 'timer',
+})
 
 const eventSource = ref<EventSource>()
 
@@ -58,8 +77,8 @@ function connectSse() {
   })
 
   eventSource.value.addEventListener('api:timer:stopped', (data) => {
-    alert('api:timer:stopped')
-    console.log(data)
+    if (isSupported.value)
+      show()
   })
 }
 
