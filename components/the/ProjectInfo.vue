@@ -17,11 +17,13 @@ const projectId = computed(() => data.value[0].id)
 
 const WEBHOOK_ID = useLocalStorage('WEBHOOK_ID', '')
 
+const config = useRuntimeConfig()
+
 async function createWebhook() {
   if (!projectId.value) return
 
   const body = {
-    "targetUrl": "https://sega-trap-means-imperial.trycloudflare.com/api/webhook",
+    "targetUrl": `${config.domain}/api/webhook`,
     "events": [
       "api:timer:stopped",
       "api:timer:started"
