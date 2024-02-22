@@ -39,7 +39,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       domain: process.env.NUXT_PUBLIC_DOMAIN || '',
-      apiKey: process.env.NUXT_API_KEY || '',
+      apiKey: process.env.NUXT_PUBLIC_API_KEY || '',
     }
   }
 })
