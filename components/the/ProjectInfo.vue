@@ -23,7 +23,7 @@ async function createWebhook() {
   if (!projectId.value) return
 
   const body = {
-    "targetUrl": `${config.domain}/api/webhook`,
+    "targetUrl": `${config.public.domain}/api/webhook`,
     "events": [
       "api:timer:stopped",
       "api:timer:started"
