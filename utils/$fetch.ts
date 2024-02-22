@@ -4,9 +4,8 @@ export const $fetch = ofetch.create({
   baseURL: 'https://api.everhour.com',
   onRequest: ({ options }) => {
     const config = useRuntimeConfig()
-    console.log('[LOG] ~ config:', config)
     options.headers = options.headers || {}
     // @ts-expect-error
-    options.headers['X-Api-Key'] = config.apiKey
+    options.headers['X-Api-Key'] = config.public.apiKey
   },
 })
