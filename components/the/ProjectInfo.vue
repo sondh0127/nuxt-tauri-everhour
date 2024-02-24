@@ -93,6 +93,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div>
+    isSupported: {{ isSupported }}
     <TheQueryWrapper v-bind="query">
       <TheTasks :project-id="projectId" />
     </TheQueryWrapper>
