@@ -97,6 +97,10 @@ onBeforeUnmount(() => {
     <TheQueryWrapper v-bind="query">
       <TheTasks :project-id="projectId" />
     </TheQueryWrapper>
-    <UiButton @click="createWebhook">Create webhooks</UiButton>
+    <div class="flex justify-center gap-2">
+      <UiButton @click="createWebhook">Create webhooks</UiButton>
+      <UiButton @click="show">Send noti</UiButton>
+    </div>
+
   </div>
 </template>
